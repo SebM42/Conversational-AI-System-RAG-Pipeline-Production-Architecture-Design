@@ -1,0 +1,22 @@
+services:
+  vector-builder:
+    profiles:
+      - vb
+    build:
+      context: .
+      dockerfile: Dockerfile-vector_builder
+    volumes:
+      - ./data:/app/data
+    container_name: vector_builder
+    
+  chatbot-service:
+    profiles:
+      - chatbot
+    build:
+      context: .
+      dockerfile: Dockerfile-chatbot
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    container_name: vector_builder

@@ -1,0 +1,13 @@
+pandas
+numpy
+langchain-text-splitters
+langchain-community
+langchain
+mistralai
+faiss-cpu
+python-dateutil
+tqdm
+requests
+fastapi
+pydantic
+uvicorn
