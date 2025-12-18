@@ -6,9 +6,8 @@
 
 - [Getting started](#getting-started)
 	- [Download Docker](#download-docker)
-	- [Install Kestra](#install-kestra)
-	- [Build Custom Python Image](#build-custom-python-image)
-	- [Import the yaml file](#import-the-yaml-file)
+	- [Download and vectorize datas](#download-and-vectorize-datas)
+	- [Launch the chatbot service](#launch-the-chatbot-service)
 
 ## Getting started
 
