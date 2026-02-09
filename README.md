@@ -2,7 +2,6 @@
 
 **Table of contents**
 
-<<<<<<< HEAD
 - [Project Goal](#-project-goal)
 - [What This POC Demonstrates](#-what-this-poc-demonstrates)
 - [Pipeline Architecture & Workflow](#-pipeline-architecture--workflow)
@@ -20,7 +19,6 @@
 	- [Download Docker](#download-docker)
 	- [Download and vectorize datas](#download-and-vectorize-datas)
 	- [Launch the chatbot service](#launch-the-chatbot-service)
->>>>>>> 9276d5ed7bbe2f93007ab87cdf98f165ea32b3cc
 
 ---
 
