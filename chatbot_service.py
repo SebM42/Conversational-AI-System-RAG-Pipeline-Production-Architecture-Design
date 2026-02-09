@@ -12,6 +12,7 @@ from mistralai import Mistral
 import faiss
 import pickle
 import numpy as np
+import os
 
 from datetime import datetime, date
 from fastapi import FastAPI
@@ -391,7 +392,7 @@ app = FastAPI(title="RAG Mistral API")
 class QuestionRequest(BaseModel):
     user_question: str
 
-API_KEY = 'U0q6FKSPa9QLqebhTh4XMG7t02N72k86'
+API_KEY = os.getenv("MISTRAL_API_KEY")
 VECTOR_INDEX_PATH = "data/indexes/descriptions.faiss"
 METADATA_PATH = "data/metadata.pkl"
 
@@ -413,7 +414,6 @@ def ask_question(request: QuestionRequest):
     user_question = request.user_question
     print(f"Question : {user_question}\n")
     
-    #try:
     # Extraction des filtres et de la requête
     filters, query_text = extract_filters_and_query(client, system_prompt_extract_filters, user_question)
     print(f"Filtres :\n{json.dumps(filters, indent=4, ensure_ascii=False)}\n")

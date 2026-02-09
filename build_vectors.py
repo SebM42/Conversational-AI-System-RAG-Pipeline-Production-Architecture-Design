@@ -356,6 +356,8 @@ def fetch_opendatasoft_events(region="Auvergne-Rhône-Alpes", start_date=None, e
     results = pd.DataFrame(data=response['results']).dropna(how='all')
     
     if total_count > 100:
+        if total_count > 10000:
+            total_count = 10000 #◙ API limitation à un offset de 10 000 max
         additional_requests = ceil((total_count - 100) / 100)
         for i in range(additional_requests):
             offset = 100 + 100 * i
@@ -399,7 +401,7 @@ def main():
     df_lite, cols_text, cols_meta = preprocess_events(events_df)
     print("Cleanup et transformation terminés")
     
-    api_key = 'U0q6FKSPa9QLqebhTh4XMG7t02N72k86'
+    api_key = os.getenv("MISTRAL_API_KEY")
     client = Mistral(api_key=api_key)
     
     faiss_indexes = build_faiss_indexes(df_lite, cols_text, client)

@@ -2,6 +2,8 @@ services:
   vector-builder:
     profiles:
       - vb
+    environment:
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
     build:
       context: .
       dockerfile: Dockerfile-vector_builder
@@ -12,6 +14,8 @@ services:
   chatbot-service:
     profiles:
       - chatbot
+    environment:
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
     build:
       context: .
       dockerfile: Dockerfile-chatbot
@@ -19,4 +23,4 @@ services:
       - "8000:8000"
     volumes:
       - ./data:/app/data
-    container_name: vector_builder
+    container_name: chatbot
