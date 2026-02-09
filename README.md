@@ -64,26 +64,14 @@ The goal is to:
   <tr>
     <td align="center">
       <b>Vector Builder Diagram</b><br>
-      <img src="./doc/vector_builder_diagram.png" alt="Vector builder diagram" width="300">
+      <img src="./doc/vector_builder_diagram.png" alt="Vector builder diagram" width="350">
     </td>
     <td align="center">
       <b>Chatbot Orchestrator Diagram</b><br>
-      <img src="./doc/chatbot_orchestrator_diagram.png" alt="Chatbot orchestrator diagram" width="300">
+      <img src="./doc/chatbot_orchestrator_diagram.png" alt="Chatbot orchestrator diagram" width="350">
     </td>
   </tr>
 </table>
-
-<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
-  <div style="text-align: center; width: 45%;">
-    <h4>Vector Builder Diagram</h4>
-    <img src="./doc/vector_builder_diagram.png" alt="Vector builder diagram" width="300">
-  </div>
-
-  <div style="text-align: center; width: 45%;">
-    <h4>Chatbot Orchestrator Diagram</h4>
-    <img src="./doc/chatbot_orchestrator_diagram.png" alt="Chatbot orchestrator diagram" width="300">
-  </div>
-</div>
 
 ---
 
